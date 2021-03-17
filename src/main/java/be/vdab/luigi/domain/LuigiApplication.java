@@ -1,4 +1,4 @@
-package be.vdab.luigi;
+package be.vdab.luigi.domain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

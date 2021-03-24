@@ -10,16 +10,17 @@
         <title th:text="${title}"></title>
         <link rel="stylesheet" th:href="@{/css/luigi.css}">
     </head>
-    <table th:fragment="table">
+    <table th:fragment="pizzaTabel(pizzas)" xmlns:th="http://www.thymeleaf.org">
         <thead>
-            <tr th:each="pizza:${pizzas}">
+            <tr>
                 <th>Naam</th>
                 <th>Prijs</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
+            <tr th:each="pizza:${pizzas}" th:object="${pizza}">
+                <td><a th:text="*{naam}" th:href="@{/pizzas/{id}(id=*{id})}"></a></td>
+                <td th:text="*{prijs}"></td>
             </tr>
         </tbody>
     </table>

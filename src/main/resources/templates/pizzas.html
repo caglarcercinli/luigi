@@ -6,8 +6,24 @@
 <body>
 <nav th:replace="fragments::menu"></nav>
 <h1>Pizza's</h1>
-<table th:replace="fragments::table">
+<table th:replace="fragments::pizzaTabel(pizzas=${pizzas})">
 
 </table>
+<!--
+<h3>Extra</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Naam</th>
+        <th>Prijs</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="pizza:${pizzas}" th:object="${pizza}">
+        <td th:text="*{naam}"></td>
+    </tr>
+    </tbody>
+</table>
+-->
 </body>
 </html>

@@ -22,15 +22,14 @@ public class PizzaController {
     public ModelAndView pizzas(){
         return new ModelAndView("pizzas","pizzas",pizzas);
     }
-    /*
-    @GetMapping
+
+    @GetMapping("{id}")
     public ModelAndView pizza(@PathVariable long id){
         var modelAndView = new ModelAndView("pizza");
         Arrays.stream(pizzas).filter(pizza->pizza.getId() == id).findFirst()
-                .ifPresent(pizza->modelAndView.addObject("pizza",pizza));
+                .ifPresent(pizza->modelAndView.addObject(pizza));
         return modelAndView;
 
     }
 
-     */
 }

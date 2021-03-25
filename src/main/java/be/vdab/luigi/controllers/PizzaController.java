@@ -29,7 +29,5 @@ public class PizzaController {
         Arrays.stream(pizzas).filter(pizza->pizza.getId() == id).findFirst()
                 .ifPresent(pizza->modelAndView.addObject(pizza));
         return modelAndView;
-
     }
-
 }

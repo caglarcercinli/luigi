@@ -1,0 +1,17 @@
+package be.vdab.luigi.restclients;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class FixerKoersClientTest {
+    private FixerKoersClient client;
+    @BeforeEach
+    void beforeEach(){
+        client=new FixerKoersClient();
+    }
+    @Test
+    void deKoersIsPOsitief(){
+        assertThat(client.getDollarKoers()).isPositive();
+    }
+}

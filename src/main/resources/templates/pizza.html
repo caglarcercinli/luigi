@@ -14,6 +14,8 @@
     <dd th:text="*{prijs}"></dd>
     <dt>Pikant</dt>
     <dd th:text="*{pikant} ? 'Ja' : 'Nee'"></dd>
+    <dt th:if="${indDollar}">In dollar</dt>
+    <dd th:if="${indDollar}" th:text="${indDollar}"></dd>
   </dl>
 </th:block>
 </body>

@@ -10,17 +10,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @PropertySource("application.properties")
-@Import(FixerKoersClient.class)
-public class FixerKoersClientTest {
-    private final FixerKoersClient client;
+@Import(ECBKoersClient.class)
+public class ECBKoersClientTest {
+    private final ECBKoersClient client;
 
-    public FixerKoersClientTest(FixerKoersClient client) {
+    public ECBKoersClientTest(ECBKoersClient client) {
         this.client = client;
     }
 
     @Test
-    void deKoersIsPOsitief(){
-
+    void deKoersIsPositief(){
         assertThat(client.getDollarKoers()).isPositive();
     }
 }
